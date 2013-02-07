@@ -27,32 +27,27 @@
             android:layout_alignParentBottom="true" >
 
             <LinearLayout
-                android:id="@+id/tab1"
+                android:id="@+id/tab1" 
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent" 
-                >
-
+                android:layout_height="fill_parent" >
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/tab2"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" >
-
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/tab3"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" >
-
             </LinearLayout>
             
             <LinearLayout
                 android:id="@+id/tab4"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" >
-
             </LinearLayout>
         </FrameLayout>
     </RelativeLayout>

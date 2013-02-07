@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="NewOne" android:label="@string/title_new_one"></activity>
     </application>
 
 </manifest>
