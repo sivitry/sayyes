@@ -60,10 +60,10 @@ public class MainActivity extends Activity {
 		});
                           
         //--set tab background color
-//        host.getTabWidget().getChildAt(0).setBackgroundColor(Color.BLACK);
-//        host.getTabWidget().getChildAt(1).setBackgroundColor(Color.BLACK);
-//        host.getTabWidget().getChildAt(2).setBackgroundColor(Color.BLACK);
-//        host.getTabWidget().getChildAt(3).setBackgroundColor(Color.BLACK);
+        host.getTabWidget().getChildAt(0).setBackgroundColor(Color.BLACK);
+        host.getTabWidget().getChildAt(1).setBackgroundColor(Color.BLACK);
+        host.getTabWidget().getChildAt(2).setBackgroundColor(Color.BLACK);
+        host.getTabWidget().getChildAt(3).setBackgroundColor(Color.BLACK);
         
         
 //        host.setCurrentTab(0);
