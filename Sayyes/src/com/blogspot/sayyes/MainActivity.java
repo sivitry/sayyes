@@ -21,20 +21,25 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         //--set tab, including tab name and icon
-        final TabHost host = (TabHost) findViewById(R.id.tabhost);
+        TabHost host = (TabHost) findViewById(R.id.tabhost);
         host.setup();
         
         //--LayoutInflater (view)
         LayoutInflater inflater = LayoutInflater.from(this);
+        inflater.inflate(R.layout.listallllayout, host.getTabContentView());        
         inflater.inflate(R.layout.newonelayout, host.getTabContentView());
-        inflater.inflate(R.layout.listallllayout, host.getTabContentView());
                 
+        
+        
+        
+        
         //--add 4 tabs
         TabHost.TabSpec newOneSpec = host.newTabSpec("NewOne");
         newOneSpec.setIndicator("", getResources().getDrawable(R.drawable.newone2));        
         newOneSpec.setContent(R.id.tab1);
         host.addTab(newOneSpec);
         
+                
         TabHost.TabSpec listAllSpec = host.newTabSpec("ListAll");
         listAllSpec.setIndicator(null, getResources().getDrawable(R.drawable.listall));
         listAllSpec.setContent(R.id.tab2);
