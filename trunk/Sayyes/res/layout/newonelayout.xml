@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android = "http://schemas.android.com/apk/res/android"
+  android:layout_width = "wrap_content"
+  android:layout_height = "wrap_content"
+  android:id = "@+id/tab1"
+  android:orientation = "vertical" >
+ 
+         <TextView
+            android:id = "@+id/tab1tv1"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "new one tab"
+         />
+        
+         <Button
+             android:id = "@+id/tab1btn1"
+             android:layout_width = "wrap_content"
+             android:layout_height = "wrap_content"
+             android:text = "button new one"
+         />
+</LinearLayout>
