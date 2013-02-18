@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/play_a_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="play step a" />
+
+    <Button
+        android:id="@+id/play_a_yesbt"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="50px"
+        android:layout_marginLeft="50px"
+        android:text="Yes" />
+
+    <Button
+        android:id="@+id/play_a_nobt"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50px"
+        android:layout_marginRight="50px"
+        android:text="No" />
+
+</RelativeLayout>

@@ -13,8 +13,6 @@ public class ListAll extends Activity{
 	}
 	
 	
-	public void printall(){
-		System.out.println("this is ListAll");	
-	}
+
 
 }

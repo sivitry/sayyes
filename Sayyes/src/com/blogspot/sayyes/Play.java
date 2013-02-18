@@ -13,8 +13,6 @@ public class Play extends Activity{
 	}
 	
 	
-	public void printall(){
-		System.out.println("this is Play");	
-	}
+
 
 }

@@ -3,25 +3,48 @@
     android:id="@+id/tab1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
-<!--  
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="206dp"
-        android:layout_height="312dp"
-        android:src="@drawable/lightsteelblue" />
--->    
-
-    <TextView
-        android:id="@+id/tab1tv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="new one tab" />
-
+
     <Button
-        android:id="@+id/tab1btn1"
-        android:layout_width="wrap_content"
+        android:id="@+id/pickPhotoButton"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="button new one" />
+        android:layout_margin="10px"
+        android:text="Pick Photo" />
+
+    <ImageView
+        android:id="@+id/pickedPhoto"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:src="@android:drawable/ic_menu_camera" />
+
+  <EditText
+      android:id="@+id/editText1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10px"
+      android:ems="10"
+      android:hint="Please Input Some Text Here."
+      android:inputType="textMultiLine" >
+
+      <requestFocus />
+  </EditText>
+
+  <Button
+      android:id="@+id/button1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10px"
+      android:text="Save" />
+
+  <Button
+      android:id="@+id/newonepreviewbt"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10px"
+      android:text="Preview" />
 
 </LinearLayout>

@@ -13,8 +13,6 @@ public class Settings extends Activity{
 	}
 	
 	
-	public void printall(){
-		System.out.println("this is Settings");	
-	}
+
 
 }
