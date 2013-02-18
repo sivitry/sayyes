@@ -12,8 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-        android:text="play step a" />
-
+        android:text="play step a" />
     <Button
         android:id="@+id/play_a_yesbt"
         android:layout_width="50px"
@@ -23,7 +22,7 @@
         android:layout_marginBottom="50px"
         android:layout_marginLeft="50px"
         android:text="Yes" />
-
+    
     <Button
         android:id="@+id/play_a_nobt"
         android:layout_width="50px"
@@ -32,6 +31,6 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="50px"
         android:layout_marginRight="50px"
-        android:text="No" />
-
+        android:text="No" />
 </RelativeLayout>
+

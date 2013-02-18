@@ -12,14 +12,14 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:src="@android:drawable/alert_dark_frame" />
-
+
     <Button
-        android:id="@+id/play_b_homebt"
+        android:id="@+id/play_b_backbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="false"
-        android:text="Home" />
+        android:text="Back" />
 
 </RelativeLayout>
