@@ -5,16 +5,16 @@ import android.os.Bundle;
 
  
 
-public class NewOne extends Activity{
+public class ListAll extends Activity{
 	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.newonelayout);
+		setContentView(R.layout.listalllayout);
 	}
 	
 	
 	public void printall(){
-		System.out.println("this is NewOne");	
+		System.out.println("this is ListAll");	
 	}
 
 }
