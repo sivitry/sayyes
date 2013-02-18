@@ -10,5 +10,7 @@
     <string name="ListAll">ListAll</string>
     <string name="Play">Play</string>
     <string name="Settings">Settings</string>
+    <string name="Play_a">Play_a</string>
+    <string name="Play_b">Play_b</string>
 
 </resources>

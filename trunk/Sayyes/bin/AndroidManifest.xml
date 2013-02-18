@@ -24,6 +24,8 @@
         <activity android:name="ListAll" android:label="@string/ListAll"></activity>
         <activity android:name="Play" android:label="@string/Play"></activity>
         <activity android:name="Settings" android:label="@string/Settings"></activity>
+        <activity android:name="Play_a" android:label="@string/Play_a"></activity>
+        <activity android:name="Play_b" android:label="@string/Play_b"></activity>
         
         
     </application>
