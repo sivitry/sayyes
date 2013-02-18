@@ -30,7 +30,7 @@ public class Play_a extends Activity{
 	
 	
 	class Play_a_OnClickListener implements OnClickListener{
-		public void onClick(View v) {
+		public void onClick(View v) {			
 			Intent it = new Intent();
 			it.setClass(Play_a.this, Play_b.class);
 			startActivity(it);			

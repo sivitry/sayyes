@@ -11,22 +11,22 @@ import android.widget.Button;
 
 public class Play_b extends Activity{
 	
-	private Button play_bhomebt;
+	private Button play_b_backbt;
 	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.play_b);
 		
-		play_bhomebt = (Button) findViewById(R.id.play_b_homebt);
+		play_b_backbt = (Button) findViewById(R.id.play_b_backbt);	
 		
-		play_bhomebt.setOnClickListener(new OnClickListener() {
+		play_b_backbt.setOnClickListener(new OnClickListener() {
 			
-			@Override
 			public void onClick(View v) {
 				Intent it = new Intent();
 				it.setClass(Play_b.this, MainActivity.class);
-				startActivity(it);
+				startActivity(it);			
 			}
-		});		
+		});
+		
 	}
 }
