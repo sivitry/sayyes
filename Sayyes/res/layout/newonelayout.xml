@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tab1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -7,25 +7,33 @@
     android:clickable="true"
     android:gravity="center_horizontal"
     android:orientation="vertical" >
+
+  <Button
+      android:id="@+id/newonepreviewbt"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+      android:layout_margin="10px"
+      android:text="Preview" />
+
+  <Button
+      android:id="@+id/pickPhotoButton"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true"
+      android:layout_margin="10px"
+      android:text="Pick Photo" />
 
-    <Button
-        android:id="@+id/pickPhotoButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10px"
-        android:text="Pick Photo" />
-
-    <ImageView
-        android:id="@+id/pickedPhoto"
-        android:layout_width="100dip"
-        android:layout_height="100dip"
-        android:src="@android:drawable/ic_menu_camera" />
-
   <EditText
-      android:id="@+id/editText1"
+      android:id="@+id/context"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_above="@+id/newonepreviewbt"
+      android:layout_alignParentRight="true"
       android:layout_margin="10px"
+      android:layout_marginBottom="35dp"
       android:ems="10"
       android:hint="Please Input Some Text Here."
       android:inputType="textMultiLine" >
@@ -33,18 +41,14 @@
       <requestFocus />
   </EditText>
 
-  <Button
-      android:id="@+id/button1"
+  <ImageView
+      android:id="@+id/pickedPhoto"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:layout_margin="10px"
-      android:text="Save" />
-
-  <Button
-      android:id="@+id/newonepreviewbt"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:layout_margin="10px"
-      android:text="Preview" />
+      android:layout_above="@+id/context"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/pickPhotoButton"
+      android:scaleType="fitXY"
+      android:src="@android:drawable/ic_menu_camera" />
 
-</LinearLayout>
+</RelativeLayout>

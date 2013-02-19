@@ -12,5 +12,7 @@
     <string name="Settings">Settings</string>
     <string name="Play_a">Play_a</string>
     <string name="Play_b">Play_b</string>
+    <string name="Preview_a">Preview_a</string>
+    <string name="Preview_b">Preview_b</string>
 
 </resources>
