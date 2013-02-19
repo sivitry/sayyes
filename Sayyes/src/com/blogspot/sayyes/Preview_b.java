@@ -2,10 +2,12 @@ package com.blogspot.sayyes;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
  
 
@@ -14,6 +16,7 @@ public class Preview_b extends Activity{
 	private Button preview_b_discardbt;
 	private Button preview_b_savebt;
 	private Button preview_b_editbt;
+	private ImageView preview_b_iv;
 	private Bundle bd;
 	
 	public void onCreate(Bundle savedInstanceState){
@@ -52,5 +55,7 @@ public class Preview_b extends Activity{
 		System.out.println(bd.getString("photouri"));
 		System.out.println(bd.getString("context"));
 			
+		preview_b_iv = (ImageView) findViewById(R.id.preview_b_iv);
+		preview_b_iv.setImageURI(Uri.parse(bd.getString("photouri")));
 	}
 }
