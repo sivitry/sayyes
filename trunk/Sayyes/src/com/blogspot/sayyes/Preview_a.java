@@ -33,6 +33,8 @@ public class Preview_a extends Activity{
 		System.out.println("preview_b");
 		System.out.println(bd.getString("photouri"));
 		System.out.println(bd.getString("context"));
+		
+		preview_a_context.setText(bd.getString("context"));
 	}
 	
 	
