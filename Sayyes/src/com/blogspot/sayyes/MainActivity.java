@@ -28,7 +28,7 @@ public class MainActivity extends Activity{
         newonebt.setOnClickListener(new NewOneOnclickListener());        
         listallbt.setOnClickListener(new ListAllOnclickListener());
         playbt.setOnClickListener(new PlayOnclickListener());
-        settingsbt.setOnClickListener(new SettingsOnclickListener());
+        settingsbt.setOnClickListener(new SettingsOnclickListener());        
     }
         
     
