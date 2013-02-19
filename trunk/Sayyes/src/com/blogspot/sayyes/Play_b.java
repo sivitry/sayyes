@@ -11,15 +11,15 @@ import android.widget.Button;
 
 public class Play_b extends Activity{
 	
-	private Button play_b_backbt;
+	private Button play_b_homebt;
 	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.play_b);
 		
-		play_b_backbt = (Button) findViewById(R.id.play_b_backbt);	
+		play_b_homebt = (Button) findViewById(R.id.play_b_homebt);	
 		
-		play_b_backbt.setOnClickListener(new OnClickListener() {
+		play_b_homebt.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
 				Intent it = new Intent();
