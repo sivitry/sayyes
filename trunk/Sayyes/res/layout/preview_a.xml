@@ -13,24 +13,26 @@
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:text="preview step a" />
+
     <Button
         android:id="@+id/preview_a_yesbt"
-        android:layout_width="50px"
-        android:layout_height="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="50px"
         android:layout_marginLeft="50px"
         android:text="Yes" />
-    
+    
     <Button
         android:id="@+id/preview_a_nobt"
-        android:layout_width="50px"
-        android:layout_height="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="50px"
         android:layout_marginRight="50px"
-        android:text="No" />
+        android:text="No" />
+
 </RelativeLayout>
 

@@ -13,21 +13,21 @@
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:text="play step a" />
-
+
     <Button
         android:id="@+id/play_a_yesbt"
-        android:layout_width="50px"
-        android:layout_height="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="50px"
         android:layout_marginLeft="50px"
         android:text="Yes" />
-    
+    
     <Button
         android:id="@+id/play_a_nobt"
-        android:layout_width="50px"
-        android:layout_height="50px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="50px"
