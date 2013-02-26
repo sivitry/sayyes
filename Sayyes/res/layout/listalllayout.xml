@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
-
+
     <ImageView
-        android:id="@+id/icon"
-        android:layout_width="22px"
-        android:layout_height="22px"
-        android:layout_marginLeft="4px"
-        android:layout_marginRight="10px"
-        android:layout_marginTop="4px"
-        android:src="@drawable/ic_launcher" >
-    </ImageView>
-
+        android:id="@+id/listalliv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_launcher" />
+
     <TextView
-        android:id="@+id/label"
-        android:layout_width="wrap_content"
+        android:id="@+id/listalltv"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@+id/label"
-        android:textSize="20px" >
-    </TextView>
+        android:layout_weight="1"
+        android:lines="3"
+        android:text="@+id/label" />
+
+    <ImageButton
+        android:id="@+id/listallplayib"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:src="@drawable/play2" />
+
+    <ImageButton
+        android:id="@+id/listalleditib"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:src="@drawable/newone2" />
+
+    <ImageButton
+        android:id="@+id/listalldelib"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:src="@drawable/black" />
 
 </LinearLayout> 

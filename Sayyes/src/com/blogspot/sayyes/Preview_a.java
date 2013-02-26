@@ -3,6 +3,7 @@ package com.blogspot.sayyes;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class Preview_a extends Activity{
 	private TextView preview_a_context;
 	private Bundle bd;
 	
+	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.preview_a);
@@ -30,9 +32,9 @@ public class Preview_a extends Activity{
 		//--Retrieve [photo], [text] from bundle 
 		bd = new Bundle();
 		bd = this.getIntent().getExtras();
-		System.out.println("preview_b");
+/*		System.out.println("preview_b");
 		System.out.println(bd.getString("photouri"));
-		System.out.println(bd.getString("context"));
+		System.out.println(bd.getString("context"));*/
 		
 		preview_a_context.setText(bd.getString("context"));
 	}
