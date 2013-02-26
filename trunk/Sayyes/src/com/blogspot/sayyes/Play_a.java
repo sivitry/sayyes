@@ -16,6 +16,9 @@ public class Play_a extends Activity{
 	private Button play_a_nobt;
 	private TextView play_a_context;
 	
+	private Bundle bd;
+	
+	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.play_a);
@@ -26,14 +29,26 @@ public class Play_a extends Activity{
 		
 		play_a_yesbt.setOnClickListener(new Play_a_OnClickListener());
 		
+		//--Retrieve [photo], [text] from bundle 
+		bd = new Bundle();
+		bd = this.getIntent().getExtras();
+		System.out.println("play_b");
+		System.out.println(bd.getString("photouri"));
+		System.out.println(bd.getString("context"));
+		
+		play_a_context.setText(bd.getString("context"));
+		
 	}
 	
 	
 	class Play_a_OnClickListener implements OnClickListener{
-		public void onClick(View v) {			
+		public void onClick(View v) {
 			Intent it = new Intent();
 			it.setClass(Play_a.this, Play_b.class);
-			startActivity(it);			
+			if(bd!=null){
+				it.putExtras(bd);
+			}
+			startActivity(it);	
 		}
 	}
 

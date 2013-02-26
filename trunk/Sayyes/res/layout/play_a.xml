@@ -3,8 +3,8 @@
     android:id="@+id/tab1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    
+    android:orientation="vertical" >    
+
     <TextView
         android:id="@+id/play_a_context"
         android:layout_width="wrap_content"
@@ -12,7 +12,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-        android:text="play step a" />
+        android:text="play step a" />
+
     <Button
         android:id="@+id/play_a_yesbt"
         android:layout_width="50px"
@@ -31,6 +32,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="50px"
         android:layout_marginRight="50px"
-        android:text="No" />
+        android:text="No" />
+
 </RelativeLayout>
 

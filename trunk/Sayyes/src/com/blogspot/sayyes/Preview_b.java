@@ -3,6 +3,7 @@ package com.blogspot.sayyes;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
@@ -61,6 +62,8 @@ public class Preview_b extends Activity{
 			public void onClick(View v) {				
 				//--save & return to home
 				openDB();
+//				getid(bd.getString("context"));
+//				del(bd.getString("context"));
 				add(bd.getString("context"),bd.getString("photouri"),bd.getString("photouri"));
 				closeDB();
 				
@@ -96,6 +99,16 @@ public class Preview_b extends Activity{
 		cv.put("_AUDIOURI", audiouri.toString());
 		db.insert("ScriptTable", null, cv);		
 	}
+	
+	//--------------
+	private void del(String content){
+		SQLiteDatabase db = dbh.getWritableDatabase();
+		System.out.println("333--"+content.toString());
+		db.execSQL("DELETE FROM ScriptTable WHERE _CONTENT='"+content.toString()+"';");
+//		db.delete("ScriptTable", "_id" +"=" + 3, null);	
+	}
+	
+
 	
 	
 }
