@@ -6,17 +6,21 @@ import java.util.Map;
 
 import com.blogspot.sayyes.NewOne.PickPhotoOnClickListener;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -77,7 +81,8 @@ public class ListAll extends ListActivity {
 			// TODO Auto-generated method stub
 			return mData.size();
 		}
-
+		
+		
 		@Override
 		public Object getItem(int arg0) {
 			// TODO Auto-generated method stub
@@ -103,12 +108,9 @@ public class ListAll extends ListActivity {
 				holder.listalltv = (TextView) convertView.findViewById(R.id.listalltv);
 				holder.listallplayib = (ImageButton) convertView.findViewById(R.id.listallplayib);
 				holder.listalleditib = (ImageButton) convertView.findViewById(R.id.listalleditib);
-				holder.listalldelib = (ImageButton) convertView.findViewById(R.id.listalldelib);
-				
+				holder.listalldelib = (ImageButton) convertView.findViewById(R.id.listalldelib);				
 				convertView.setTag(holder);
-
 			} else {
-
 				holder = (ViewHolder) convertView.getTag();
 			}
 
@@ -119,7 +121,7 @@ public class ListAll extends ListActivity {
 			holder.listalltv.setText(tempcontext);
 			holder.listallplayib.setOnClickListener(new PlayOnClickListener());
 			holder.listalleditib.setOnClickListener(new EditOnClickListener());
-			holder.listalldelib.setOnClickListener(new DeleteOnClickListener());
+			holder.listalldelib.setOnClickListener(new DeleteOnClickListener((String)mData.get(position).get("context")));
 						
 			return convertView;
 		}		
@@ -173,19 +175,51 @@ public class ListAll extends ListActivity {
 	
     
     class DeleteOnClickListener implements OnClickListener {
+    	
+    	final String context;
+    	
+    	public DeleteOnClickListener(String context){
+    		this.context = context;
+    	}
 
     	public void onClick(View v) {
-			openDB();
-			SQLiteDatabase db = dbh.getWritableDatabase();
-			System.out.println("DeleteOnClickListener--"+tempcontext);
-			db.execSQL("DELETE FROM ScriptTable WHERE _CONTENT='"+tempcontext+"';");
-			closeDB();
-			
-			//--Reload activity after delete.
-			Intent it = getIntent();
-			finish();
-			startActivity(it);
+    		
+    		AlertDialog.Builder builder = new AlertDialog.Builder(ListAll.this);
+    		builder.setMessage("確定要刪除嗎?");
+//    		builder.setTitle("提示");
+    		  
+    		  
+    		builder.setPositiveButton("確認", new DialogInterface.OnClickListener() {
+    			public void onClick(DialogInterface dialog, int which) {
+    				
+    				openDB();
+    				SQLiteDatabase db = dbh.getWritableDatabase();
+    				System.out.println("DeleteOnClickListener--"+ context);
+    				db.execSQL("DELETE FROM ScriptTable WHERE _CONTENT='"+ context+"';");
+    				closeDB();
+    				
+    				//--Reload activity after delete.
+    				Intent it = getIntent();
+    				dialog.dismiss();
+    				ListAll.this.finish();
+    				startActivity(it);
+    			}
+    		});
+
+    		builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+    			public void onClick(DialogInterface dialog, int which) {
+    				dialog.dismiss();
+    			}
+    		});		
+//    		builder.create().show();
+//    		builder.create();
+    		AlertDialog dialog = builder.show();		
+    		TextView messageText = (TextView)dialog.findViewById(android.R.id.message);
+    		messageText.setGravity(Gravity.CENTER);	
+    		dialog.show();
 		}
+    	
+    	
     }
 	
 	
@@ -244,6 +278,13 @@ public class ListAll extends ListActivity {
 			db.delete("ScriptTable", "_id" +"=" + i, null);		
 	}
 	    
+	
+
+	
+	
+	
+	
+	
 //	    
 //	@Override
 //	protected void onListItemClick(ListView l, View v, int position, long id) {
