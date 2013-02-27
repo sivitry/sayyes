@@ -36,6 +36,7 @@ public class Play_b extends Activity{
 			public void onClick(View v) {
 				Intent it = new Intent();
 				it.setClass(Play_b.this, MainActivity.class);
+				it.addFlags(it.FLAG_ACTIVITY_REORDER_TO_FRONT);
 				startActivity(it);			
 			}
 		});
